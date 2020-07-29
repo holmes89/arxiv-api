@@ -1,4 +1,4 @@
-import os, streams, parsexml, strutils, httpClient
+import os, streams, parsexml, strutils, httpClient, json
 
 proc `=?=` (a, b: string): bool =
   # comparator that ignores case
@@ -68,4 +68,4 @@ while true:
     x.next()
   else: x.next() # skip other events
 x.close()
-echo papers
+echo %*papers
